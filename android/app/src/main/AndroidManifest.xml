@@ -7,12 +7,13 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:label="hourly_voice_alarm"
         android:name="${applicationName}"
-        android:icon="@drawable/app_icon"
+        android:icon="@mipmap/ic_launcher"
         android:theme="@style/LaunchTheme">
 
         <activity
@@ -33,12 +34,11 @@
             </intent-filter>
         </activity>
 
-        <!-- ✅ 2. 부팅 후 알림 복구를 위한 리시버 등록 -->
+        <!-- ✅ 부팅 후 알림 복구를 위한 리시버 등록 비활성화 -->
         <receiver
-            android:enabled="true"
-            android:exported="true"
-            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
-            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
+            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+            android:enabled="false"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
