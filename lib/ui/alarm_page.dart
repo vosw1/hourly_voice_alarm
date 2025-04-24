@@ -17,7 +17,7 @@ class _AlarmPageState extends State<AlarmPage> {
   @override
   void initState() {
     super.initState();
-    startHour = 9; // 초기값 설정
+    startHour = 8; // 초기값 설정
     startMinute = 0; // 초기값 설정
     endHour = 20; // 초기값 설정
     endMinute = 0; // 초기값 설정
@@ -28,9 +28,9 @@ class _AlarmPageState extends State<AlarmPage> {
   _loadPreferences() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
-      startHour = prefs.getInt('startHour') ?? 9;
+      startHour = prefs.getInt('startHour') ?? 8;
       startMinute = prefs.getInt('startMinute') ?? 0;
-      endHour = prefs.getInt('endHour') ?? 21;
+      endHour = prefs.getInt('endHour') ?? 20;
       endMinute = prefs.getInt('endMinute') ?? 0;
     });
   }
@@ -95,9 +95,9 @@ class _AlarmPageState extends State<AlarmPage> {
                   ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        startHour = 9;  // 예시로 9시로 설정
+                        startHour = 8;  // 예시로 8시로 설정
                         startMinute = 0; // 0분으로 설정
-                        endHour = 21;   // 예시로 21시로 설정
+                        endHour = 20;   // 예시로 20시로 설정
                         endMinute = 0;   // 0분으로 설정
                       });
                       _savePreferences(startHour, startMinute, endHour, endMinute);

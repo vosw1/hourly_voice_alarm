@@ -95,6 +95,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        appBarTheme: AppBarTheme(
+          titleTextStyle: TextStyle(color: Colors.white), // 타이틀 글자색 흰색으로 설정
+        ),
       ),
       home: const AlarmPage(),
     );
