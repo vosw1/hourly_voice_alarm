@@ -1,15 +1,19 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hourly_voice_alarm">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- ✅ 1. 부팅 완료 권한 추가 (application 바깥) -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
 
     <application
         android:label="hourly_voice_alarm"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@drawable/app_icon"
+        android:theme="@style/LaunchTheme">
 
         <activity
             android:name=".MainActivity"

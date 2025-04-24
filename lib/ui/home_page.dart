@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'AlarmPage.dart'; // 알림 설정 페이지 import
+import 'alarm_page.dart'; // 알림 설정 페이지 import
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

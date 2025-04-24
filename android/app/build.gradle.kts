@@ -42,7 +42,7 @@ android {
 }
 
 dependencies {
-    implementation("com.android.tools:desugar_jdk_libs:1.1.5")  // desugaring 라이브러리 추가
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
 }
 
 flutter {
